@@ -1,0 +1,6 @@
+pts1 = np.float32([[(int)(array[1]),(int)(array[2])],[(int)(array[3]),(int)(array[4])],[(int)(array[5]),(int)(array[6])],[(int)(array[7]),(int)(array[8])]])
+    pts1=np.array(pts1,dtype=np.float32)
+pts2 = np.float32([[0,0],[1328,0],[1328,819],[0,819]])
+    pts2=np.array(pts2,dtype=np.float32)
+    M = cv2.getPerspectiveTransform(pts1,pts2)
+    res0 = cv2.warpPerspective(img0,M,(newWidth,newHeight))
